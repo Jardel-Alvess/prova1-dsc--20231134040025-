@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Imovel {
+public class Veiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,9 +16,9 @@ public class Imovel {
     private String tipo;
     private String nomeProprietario;
 
-    public Imovel(){}
+    public Veiculo(){}
 
-    public Imovel (Long id, String placa, String modelo, Integer anoFabricacao, String tipo, String nomeProprietario){
+    public Veiculo (Long id, String placa, String modelo, Integer anoFabricacao, String tipo, String nomeProprietario){
         this.id = id;
         this.placa = placa;
         this.modelo = modelo;

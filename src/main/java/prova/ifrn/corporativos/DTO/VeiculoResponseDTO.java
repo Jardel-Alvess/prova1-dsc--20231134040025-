@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data 
 @NoArgsConstructor 
 @AllArgsConstructor 
-public class ImovelResponseDTO {
+public class VeiculoResponseDTO {
 
     @NotBlank 
     private String placa;
