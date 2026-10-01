@@ -15,11 +15,17 @@ public class VeiculoRepository {
         return new ArrayList<>(veiculos);
     }
 
-    
+    public Veiculo save(Veiculo veiculo) {
+        if (veiculo.getId() == null) {
+            veiculo.setId(proximoId.getAndIncrement());
+        } else {
+            deleteById(veiculo.getId());
+        }
+        veiculos.add(veiculo);
+        return veiculo;
+    }
 
     public void deleteById(Long id) {
         veiculos.removeIf(veiculo -> veiculo.getId().equals(id));
     }
-
-
 }
