@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import prova.ifrn.corporativos.DTO.VeiculoRequestDTO;
 import prova.ifrn.corporativos.DTO.VeiculoResponseDTO;
+import prova.ifrn.corporativos.servicoveiculo.exception.VeiculoNaoEncontradoException;
 import prova.ifrn.corporativos.servicoveiculo.model.Veiculo;
 import prova.ifrn.corporativos.servicoveiculo.repository.VeiculoRepository;
 
@@ -47,7 +48,7 @@ public class VeiculoService {
     }
 
     private VeiculoResponseDTO toResponseDTO(Veiculo salvo) {
-        return new Veiculo(null, dto.getEndereco(), dto.getValorAluguel(), dto.getDescricao());;
+        return new Veiculo(null, dto.getId(), dto.getplaca(), dto.getmodelo(), dto.getanoFabricacao(), dto.gettipo(), dto.getnomeProprietario());;
     }
 
     private Object toEntity(VeiculoRequestDTO dto) {
