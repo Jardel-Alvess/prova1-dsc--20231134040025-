@@ -57,8 +57,7 @@ public class VeiculoController {
 
     @DeleteMapping("/{id}")
     public VeiculoEntity<Void> excluir(@PathVariable Long id){
-        veiculoService.excluir(id)
+        veiculoService.excluir(id);
         return ResponseEntity.noContent().build();
     }
-
 }
